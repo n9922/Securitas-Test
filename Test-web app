@@ -1,0 +1,16 @@
+using System;
+using System.Web;
+
+namespace AzureWebAppSample
+{
+    public class HelloWorld : IHttpHandler
+    {
+        public void ProcessRequest(HttpContext context)
+        {
+            context.Response.ContentType = "text/plain";
+            context.Response.Write("Hello, Azure Web App!");
+        }
+
+        public bool IsReusable => false;
+    }
+}
